@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+        <script>
+
+function BotaoONOut(linha) {
+        var display = document.getElementById(linha).style.display;
+        if(display == "none")
+            document.getElementById(linha).style.display = 'block';
+        else
+            document.getElementById(linha).style.display = 'none';
+    }
+
+</script>
+<body>
+   <div id="div">Clique no Botão para Apagar o Paragrafo</div></br>
+<button type="button" onclick="BotaoONOut('div')"> Mostrar / Esconder</button>
+
+</body>
+    </html>

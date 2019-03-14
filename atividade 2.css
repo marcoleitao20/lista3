@@ -1,0 +1,9 @@
+html, body{
+    margin: 0;
+    padding: 0;
+}
+
+.bg-link{
+    width: 200px;
+    height: 50px;
+}

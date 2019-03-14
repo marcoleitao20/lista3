@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="atividade 2.css">
+</head>
+
+<body>
+
+    <div class="bg-link" color="yellow">
+        Passe o mouse - Amarelo
+    </div>
+    <div class="bg-link" color="red">
+        Passe o mouse - Vermelho
+    </div>
+    <div class="bg-link" color="blue">
+        Passe o mouse - Azul
+    </div>
+    <div class="bg-link" color="green">
+        Passe o mouse - Green
+    </div>
+
+
+    <script>
+        var divs = document.querySelectorAll(".bg-link");
+        var backgroudPagina = document.getElementsByTagName("body");
+         divs.forEach(function (div, key) {
+
+            div.addEventListener('mouseout', function () {
+                var color = div.getAttribute("color");
+                var backgroudPagina = document.getElementsByTagName("body");
+               backgroudPagina[0].style.backgroundColor = "";
+             });
+
+             div.addEventListener('mouseover', function () {
+                 var color = div.getAttribute("color");
+                 var backgroudPagina = document.getElementsByTagName("body");
+                backgroudPagina[0].style.backgroundColor = color;
+             });
+
+         });
+        divs.forEach(function (div, key) {
+
+            div.addEventListener('mouseout', function () {
+                var color = div.getAttribute("color");
+                dibackgroudPaginav.style.backgroundColor = "";
+            });
+
+            div.addEventListener('mouseover', function () {
+                var color = div.getAttribute("color");
+                backgroudPagina.style.backgroundColor = color;
+            });
+
+        });
+    </script>
+</body>
+
+</html>

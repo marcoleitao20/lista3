@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+        <script>
+                function ArcoIris(COR) {
+                switch (COR) {
+                    case 'Vermelho': document.bgColor = 'red'; break;
+                    case 'Laranja': document.bgColor = 'orange'; break;
+                    case 'Amarelo': document.bgColor = 'yellow'; break;
+                    case 'Verde': document.bgColor = 'green'; break;
+                    case 'Azul': document.bgColor = 'blue'; break;
+                                }
+
+                
+                }
+                </script>
+<body>
+<select type="color" id="cores" name="ArcoIris" list="arcoIris" value="#FF0000">
+<datalist id="arcoIris">
+    <option value="red" onclick="ArcoIris('Vermelho');"> Vermelho</option>
+    <option value= "orange" onclick="ArcoIris('Laranja');">Laranja</option>
+    <option value= "yellow" onclick="ArcoIris('Amarelo');">Amarelo</option>
+    <option value= "green" onclick="ArcoIris('Verde');">Verde</option>
+    <option value= "blue" onclick="ArcoIris('Azul');">Azul</option>
+</datalist>
+    </body>
+    </html>

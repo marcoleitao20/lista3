@@ -1,0 +1,49 @@
+<html>
+    <head>
+<meta charset="utf-8">
+        <script type="text/javascript">
+function validar(){
+
+    var senha = cadastro.senha.value;
+   var validarsenha = cadastro.validarsenha.value;
+
+        if(document.cadastro.login.value=="")
+        {
+            alert('Preencha o campo Login');
+            document.cadastro.login.focus();
+            return false;
+        }
+      
+        
+   if(senha.length <=5 || senha.length >=9 ) {
+        alert('Preencha o Campo Senha');
+        cadastro.senha.focus();
+       return false; 
+   }
+   if(validarsenha.length <=5 || validarsenha.length >=9 ) {
+        alert('Preencha o Campo Confirmar Senha');
+        cadastro.validarsenha.focus();
+       return false; 
+   }
+
+   if(senha != validarsenha){
+       alert('Senhas Diferentes');
+       cadastro.senha.focus();
+       return false;
+       
+   }
+}
+
+         </script>
+    </head>
+
+ <body>
+<form name="cadastro" action="enviar.php" method="POST">
+    Login:<input type="text" name="login"><br><br>
+    Senha:<input type="password" name="senha"><br><br>
+    Confirmar Senha:<input type="password" name="validarsenha"></imput><br><br>
+
+    <input type="submit" onclick="return validar()">
+</form>
+</body>
+</html>
