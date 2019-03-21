@@ -1,18 +1,46 @@
-<html>
-    <head>
-            <meta charset="utf-8">
-        <script type="text/javascript">{
-function inverter(s) {
-  return s.split('').reverse().join('');
+﻿<html>
+<head>
+    <h1>Atividade 7</h1>
+</head>
+<script>
+    function Nomes() {
+
+var c1 = document.getElementById('c1').value;
+var c2 = document.getElementById('c2').value;
+var c3 = document.getElementById('c3').value;
+var c4 = document.getElementById('c4').value;
+var c5 = document.getElementById('c5').value;
+
+var Dados = [];
+Dados.push(c1, c2, c3, c4, c5);
+Dados.reverse(); 
+document.getElementById('c1').value = Dados[0];
+document.getElementById('c2').value = Dados[1];
+document.getElementById('c3').value = Dados[2];
+document.getElementById('c4').value = Dados[3];
+document.getElementById('c5').value = Dados[4];
+
 }
-        }
- </script>
-    </head>
- <body>
-<form>
-        Escreva a Palavra: <input type="text" onclick="inverter()">
-        <input type="submit" onclick="inverter()";
-        
-    </form>
- </body>
- </html>
+
+</script>
+<body>
+
+    <div>
+        <form id="Questão 7">
+            Primeiro nome: <input type="text" id="c1">
+            <p></p>
+            Segundo nome: <input type="text" id="c2">
+            <p></p>
+            Terceiro nome: <input type="text" id="c3">
+            <p></p>
+            Quarto nome: <input type="text" id="c4">
+            <p></p>
+            Quinto nome: <input type="text" id="c5">
+            <p></p>
+            <p></p>
+            <input type="button" value="Inverter" onclick="Nomes();">
+        </form>
+    </div>
+</body>
+
+</html>

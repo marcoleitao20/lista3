@@ -1,0 +1,37 @@
+﻿<hml>
+
+    <head>
+        <h1>Atividade 9</h1>
+    </head>
+<script>
+
+function Intercalar() {
+    document.getElementById('i3').value = "";
+    var c1 = document.getElementById('i1').value;
+    var c2 = document.getElementById('i2').value;
+
+    if (c1.length < c2.length) {
+        var result = c2.length;
+    } else {
+        var result = c1.length;
+    }
+
+    for (i = 0; i < result; i++) {
+        document.getElementById('i3').value += c1.substring(i, i + 1) + c2.substring(i, i + 1);
+    }
+}
+
+
+
+</script>
+    <body>
+
+        <div id="Atividade 9">
+            <form>
+                Primeiro Nome <input id="i1" type="text"><br><br>
+                Segundo Nome <input id="i2" type="text" onchange="javascript:Intercalar();"><br><br>
+                Resultado <input id="i3" type="text" disabled>
+                </for>
+        </div>
+    </body>
+</hml>

@@ -1,0 +1,62 @@
+﻿<html>
+
+<head>
+    <h1>Atividade 8</h1>
+
+</head>
+<script>
+function valor(qual) {
+    if (qual == "cpf") {
+        document.form.cpf.style.display = "block";
+        document.form.cnpj.style.display = "none";
+        document.form.date.style.display = "block";
+    }
+    if (qual == "cnpj") {
+        document.form.cpf.style.display = "none";
+        document.form.cnpj.style.display = "block";
+        document.form.date.style.display = "none";
+    }
+}
+
+function CheckNumber(value) {
+    if (value.trim() !== "") {
+        var regra = /^[0-9]+$/;
+        if (value.match(regra)) {
+            return;
+        }
+        else { 
+            document.getElementById('Ce').value = "";
+            alert("Permitido somente números");
+        }
+    }
+}
+
+</script>
+<body>
+    <div id="Atividade 8">
+        <form name="form">
+            <h3> Cadastro</h3>
+            Nome: <input type="text" name="name">
+            <p></p>
+            <p>Tipo de Pessoa</p>
+            Física: <input type="radio" name="qual" value="cpf" onclick="valor('cpf')"><br>
+            Jurídica: <input type="radio" name="qual" value="cnpj" onclick="valor('cnpj')">
+            <input type="text" name="cpf" value="Insira seu CPF" style="display:none;">
+            <input type="text" name="cnpj" value="Insira seu CNPJ" style="display:none;">
+            <p></p>
+            <input type="date" name="date" value="Insira seu Nascimento" style="display:none;">
+            <p></p>
+            Endereço: <input type="text" name="end">
+            <p></p>
+            CEP: <input id="Ce" type="text" name="cep" onblur="CheckNumber(this.value)">
+            <p></p>
+            Telefone: <input type="tel" name="cel">
+            <p></p>
+            Email: <input type="email" name="email">
+            <p></p>
+            <input type="submit" name="sub" value="Enviar">
+        </form>
+    </div>
+</body>
+
+</html>
